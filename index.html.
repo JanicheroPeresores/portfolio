@@ -10,8 +10,7 @@
   <header>
     <h1 id="name">Janichero Y. Peresores</h1>
 
-    <!-- Make sure this image is in your project folder -->
-    <img src="profile.jpg" alt="Profile Picture" id="profile-img" />
+    <img src="AKI.jpg" alt="Profile Picture" id="profile-img" />
 
     <p id="course-year">IS - 2nd Year</p>
     <button id="theme-toggle">Switch Theme</button>
