@@ -7,32 +7,64 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
     <h1 id="name">Janichero Y. Peresores</h1>
-
     <img src="AKI.jpg" alt="Profile Picture" id="profile-img" />
-
     <p id="course-year">IS - 2nd Year MMCM</p>
     <button id="theme-toggle">Switch Theme</button>
   </header>
 
+  <!-- ACHIEVEMENTS -->
   <section id="achievements">
-    <h2>Achievements / Certifications</h2>
-    <ul>
-      <li>Dart Champion 2024 Gensan</li>
-      <li>Top4 3-man Team Araw ng Davao Darts</li>
-      <li>Regional 3rd Runner up Badminton</li>
-    </ul>
+    <h2>Achievements</h2>
+    <div class="gallery">
+
+      <div class="card" onclick="openModal('achievement1.jpg')">
+        <img src="achievement1.jpg" class="icon" alt="">
+        <p>Dart Champion 2024 Gensan</p>
+      </div>
+
+      <div class="card" onclick="openModal('achievement2.jpg')">
+        <img src="achievement2.jpg" class="icon" alt="">
+        <p>Top 4 – 3-Man Team Araw ng Davao</p>
+      </div>
+
+      <div class="card" onclick="openModal('achievement3.jpg')">
+        <img src="achievement3.jpg" class="icon" alt="">
+        <p>Regional 3rd Runner-Up Badminton</p>
+      </div>
+
+    </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
-    <h2>Previous Projects</h2>
-    <ul>
-      <li>Engine CC Calculator</li>
-      <li>Home-wage Calculator</li>
-      <li>Smartphone UI Design</li>
-    </ul>
+    <h2>My Projects</h2>
+    <div class="gallery">
+
+      <a href="https://github.com/JanicheroPeresores/Peresores_Calculator" target="_blank" class="card">
+        <img src="project_calculator.jpg" class="icon" alt="">
+        <p>Peresores Calculator</p>
+      </a>
+
+      <a href="https://github.com/JanicheroPeresores/Peresores_MyFirstApp" target="_blank" class="card">
+        <img src="project_firstapp.jpg" class="icon" alt="">
+        <p>My First App</p>
+      </a>
+
+      <a href="https://github.com/JanicheroPeresores/greensense_Peresores" target="_blank" class="card">
+        <img src="greensense_logo.jpg" class="icon" alt="">
+        <p>GreenSense System</p>
+      </a>
+
+    </div>
   </section>
+
+  <!-- IMAGE MODAL -->
+  <div id="image-modal" class="modal" onclick="closeModal()">
+    <img id="modal-img">
+  </div>
 
   <script src="script.js"></script>
 </body>
