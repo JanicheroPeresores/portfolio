@@ -64,13 +64,13 @@ h2 {
 
 /* GALLERY */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  justify-content: center;   /* centers the grid */
-  justify-items: center;     /* centers each card */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* centers the cards horizontally */
   gap: 18px;
   animation: fadeIn 0.8s ease-in;
 }
+
 
 /* CARD STYLE */
 .card {
@@ -83,6 +83,7 @@ h2 {
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
   cursor: pointer;
   backdrop-filter: blur(6px); /* glass effect */
+  width: 140px; /* fixed width to make all cards uniform */
 }
 
 .card:hover {
