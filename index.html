@@ -3,85 +3,202 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JPeresores Portfolio</title>
+  <title>Janichero Peresores | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="page-glow glow-left"></div>
+  <div class="page-glow glow-right"></div>
 
-  <header>
-    <h1 id="name">Janichero Y. Peresores</h1>
-    <img src="AKI.jpg" alt="Profile Picture" id="profile-img" />
-    <p id="course-year">IS - 2nd Year MMCM</p>
-    <button id="theme-toggle">Switch Theme</button>
-  </header>
-
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <div class="gallery-wrapper">
-      <div class="gallery">
-
-        <div class="card" onclick="openModal('DART.jpg')">
-          <img src="DART.jpg" class="icon" alt="Dart Champion 2024 Gensan">
-          <p>Dart Champion 2024 Gensan</p>
-        </div>
-
-        <div class="card" onclick="openModal('dart1.jpg')">
-          <img src="dart1.jpg" class="icon" alt="Top 4 – 3-Man Team Araw ng Davao">
-          <p>Top 4 – 3-Man Team Araw ng Davao</p>
-        </div>
-
-        <div class="card" onclick="openModal('BADMMM.jpg')">
-          <img src="BADMMM.jpg" class="icon" alt="Regional 3rd Runner-Up Badminton">
-          <p>Regional 3rd Runner-Up Badminton</p>
-        </div>
-
-      </div>
+  <nav class="site-nav">
+    <a class="logo" href="#home">Janichero <span>Peresores</span></a>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
-  </section>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="gallery-wrapper">
-      <div class="gallery">
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-        <!-- Peresores Calculator -->
-        <div class="card">
-          <img src="App1.jpg" class="icon" alt="Peresores Calculator" onclick="openModal('App1.jpg')">
-          <p>Peresores Calculator</p>
-          <a href="https://github.com/JanicheroPeresores/Peresores_Calculator" target="_blank" class="link-icon">🔗</a>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Information Systems Student</p>
+        <h1>Hey, I'm <span>Janichero</span></h1>
+        <p class="type-line">I'm a <span id="typewriter-text"></span><span class="cursor">|</span></p>
+        <p class="hero-summary">
+          2nd Year MMCM student building practical school and personal projects while competing in darts and badminton.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#projects">View Projects</a>
+          <a class="ghost-btn" href="#achievements">See Achievements</a>
         </div>
-
-        <!-- My First App -->
-        <div class="card">
-          <img src="App2.jpg" class="icon" alt="My First App" onclick="openModal('App2.jpg')">
-          <p>My First App</p>
-          <a href="https://github.com/JanicheroPeresores/Peresores_MyFirstApp" target="_blank" class="link-icon">🔗</a>
+        <div class="social-links">
+          <a href="https://github.com/JanicheroPeresores" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
-
-        <!-- GreenSense -->
-        <div class="card">
-          <img src="greensense.jpg" class="icon" alt="GreenSense Logo" onclick="openModal('greensense.jpg')">
-          <p>GreenSense System</p>
-          <a href="https://janicheroperesores.github.io./greensense_Peresores/" target="_blank" class="link-icon">🔗</a>
-        </div>
-
-        <!-- PUBG Stat Reviewer -->
-        <div class="card">
-          <!-- FIXED HERE -->
-          <img src="PUBG LOGO.jpg" class="icon" alt="Pubg Logo" onclick="openModal('PUBG LOGO.jgp')">
-          <p>Pubg Stat Reviewer</p>
-          <a href="https://janicheroperesores.github.io./pubg_stat_reviewer/" target="_blank" class="link-icon">🔗</a>
-        </div>
-
       </div>
-    </div>
-  </section>
 
-  <!-- IMAGE MODAL -->
-  <div id="image-modal" class="modal" onclick="closeModal()">
-    <img id="modal-img">
+      <div class="hero-visual">
+        <div class="portrait-ring">
+          <img src="AKI.jpg" alt="Portrait of Janichero Peresores" />
+        </div>
+        <div class="info-card">
+          <p class="info-label">Current Focus</p>
+          <p class="info-value">UI projects, class systems, and competitive sports</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-card" id="about">
+      <div class="section-heading">
+        <p class="section-tag">About Me</p>
+        <h2>Student, builder, and competitor.</h2>
+      </div>
+      <div class="about-grid">
+        <p>
+          I am Janichero Y. Peresores, an Information Systems student from MMCM. I enjoy turning ideas into working apps,
+          learning through hands-on builds, and improving both in academics and competition.
+        </p>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <strong>2nd Year</strong>
+            <span>BS Information Systems</span>
+          </div>
+          <div class="stat-box">
+            <strong>4</strong>
+            <span>Featured Projects</span>
+          </div>
+          <div class="stat-box">
+            <strong>3</strong>
+            <span>Sports Achievements</span>
+          </div>
+          <div class="stat-box">
+            <strong>MMCM</strong>
+            <span>School Community</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-card" id="achievements">
+      <div class="section-heading">
+        <p class="section-tag">Achievements</p>
+        <h2>Competitive highlights.</h2>
+      </div>
+      <div class="card-grid">
+        <article class="feature-card" data-image="DART.jpg">
+          <img src="DART.jpg" alt="Dart Champion 2024 Gensan" />
+          <div class="feature-copy">
+            <h3>Dart Champion 2024 Gensan</h3>
+            <p>Won a major local darts competition and strengthened consistency under pressure.</p>
+          </div>
+        </article>
+
+        <article class="feature-card" data-image="dart1.jpg">
+          <img src="dart1.jpg" alt="Top 4 3-Man Team Araw ng Davao" />
+          <div class="feature-copy">
+            <h3>Top 4 at Araw ng Davao</h3>
+            <p>Placed in the top four as part of a 3-man team in a competitive regional event.</p>
+          </div>
+        </article>
+
+        <article class="feature-card" data-image="BADMMM.jpg">
+          <img src="BADMMM.jpg" alt="Regional 3rd Runner-Up Badminton" />
+          <div class="feature-copy">
+            <h3>Regional 3rd Runner-Up</h3>
+            <p>Reached the podium in badminton through disciplined training and tournament focus.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-card" id="projects">
+      <div class="section-heading">
+        <p class="section-tag">Projects</p>
+        <h2>Work I have built so far.</h2>
+      </div>
+      <div class="card-grid">
+        <article class="project-card">
+          <button class="image-button" data-image="App1.jpg" aria-label="Open TaskKeeper preview">
+            <img src="TASKKEEPER.png" alt="TaskKeeper app preview" />
+          </button>
+          <div class="feature-copy">
+            <h3>TaskKeeper</h3>
+            <p>A task management app project that focuses on keeping track on tasks.</p>
+            <a href="https://taskkeeper-virid.vercel.app" target="_blank" rel="noreferrer">Open Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <button class="image-button" data-image="App2.jpg" aria-label="Open My First App preview">
+            <img src="App2.jpg" alt="My First App preview" />
+          </button>
+          <div class="feature-copy">
+            <h3>My First App</h3>
+            <p>An early mobile app build that helped me learn layout, structure, and user flow basics.</p>
+            <a href="https://github.com/JanicheroPeresores/Peresores_MyFirstApp" target="_blank" rel="noreferrer">Open Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <button class="image-button" data-image="greensense.jpg" aria-label="Open GreenSense preview">
+            <img src="greensense.jpg" alt="GreenSense project preview" />
+          </button>
+          <div class="feature-copy">
+            <h3>GreenSense System</h3>
+            <p>A sustainability-focused system project built to present a clearer environmental monitoring idea.</p>
+            <a href="https://janicheroperesores.github.io/greensense_Peresores/" target="_blank" rel="noreferrer">Open Live Project</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <button class="image-button" data-image="PUBG LOGO.jpg" aria-label="Open PUBG Stat Reviewer preview">
+            <img src="PUBG LOGO.jpg" alt="PUBG Stat Reviewer logo" />
+          </button>
+          <div class="feature-copy">
+            <h3>PUBG Stat Reviewer</h3>
+            <p>A game stat review concept for checking player data and presenting it in a simpler format.</p>
+            <a href="https://janicheroperesores.github.io/pubg_stat_reviewer/" target="_blank" rel="noreferrer">Open Live Project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-card contact-card" id="contact">
+      <div class="section-heading">
+        <p class="section-tag">Contact</p>
+        <h2>Open to school work, collaboration, and new builds.</h2>
+      </div>
+      <p class="contact-copy">
+        If you want to connect about projects, classes, or opportunities, reach out through my GitHub profile and project links.
+      </p>
+      <a class="primary-btn" href="https://github.com/JanicheroPeresores" target="_blank" rel="noreferrer">Visit GitHub</a>
+    </section>
+  </main>
+
+  <div class="modal" id="image-modal" aria-hidden="true">
+    <button class="modal-close" id="modal-close" aria-label="Close image preview">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img id="modal-img" alt="Expanded preview" />
   </div>
 
   <script src="script.js"></script>
